@@ -1,1 +1,1 @@
-https://github.com/TopherJRC50/team-page.git
+https://cen4010-fa21-g06.github.io/Group06/
