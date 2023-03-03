@@ -42,7 +42,14 @@ This reminder app is intended to help users remember important events, tasks, an
 5 Initial list of high-level functional requirements 
 
 6 List of non-functional requirements 
-
+  1. Performance: The mobile app must be fast and responsive, with minimal loading times and low memory consumption. The app must respond to user input within 1 second.
+  2. Usability: The mobile app must be intuitive and user-friendly, with clear and concise instructions for all features. The design must be optimized for mobile devices and should support gestures like swipe and pinch.
+  3. Accessibility: The mobile app must meet the standards of WCAG 2.1, with support for screen readers, large text sizes, and high contrast modes. The app must be compatible with both iOS and Android accessibility features.
+  4. Security: The mobile app must ensure the privacy and security of user data. All user data must be encrypted and stored securely. The app must be able to detect and prevent unauthorized access, tampering, or data loss.
+  5. Availability: The mobile app must have a minimum uptime of 99%, with downtime not exceeding 2 hours per month for maintenance. The app must be available for download from both Apple App Store and Google Play Store.
+  6. Scalability: The application must be able to handle increased user load without performance degradation, and scale horizontally as needed.
+  7. Storage: The application must be able to store large amounts of data, with a minimum of 1GB per user.
+  8. Fault Tolerance: The application must be resilient to hardware and software failures, and should have a disaster recovery plan in place to ensure data availability in the event of a catastrophic failure.
 7 High-level system architecture 
 
 8 Team 
