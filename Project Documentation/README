@@ -52,7 +52,7 @@ This reminder app is intended to help users remember important events, tasks, an
 5.	Enable users to share their reminder lists with other users or export them to other apps or devices: This requirement allows users to share their reminder lists with others, such as family or colleagues or export them to other apps or devices. This ensures that users can access their reminders from any device or share them with others easily.
 6.	Provide a snooze function: This requirement allows users to delay a reminder for a specific period of time, such as 5 minutes or 10 minutes. This is helpful when users are busy or not able to attend to the reminder application immediately.
 7.	Offer a user friendly interface: The app will have a user friendly interface with easy navigation, intuitive controls and an appealing design, This will ensure that the users can use the app without any difficulty and enjoy a good user experience.
-
+8.	Allows users to set reminders based on their location: This requirement allows users to set reminders based on their location, such as reminding them to buy grocery if they are near a supermarket.
 6 List of non-functional requirements 
   1. Performance: The mobile app must be fast and responsive, with minimal loading times and low memory consumption. The app must respond to user input within 1 second.
   2. Usability: The mobile app must be intuitive and user-friendly, with clear and concise instructions for all features. The design must be optimized for mobile devices and should support gestures like swipe and pinch.
