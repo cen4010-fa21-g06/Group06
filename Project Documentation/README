@@ -7,6 +7,23 @@ People can manage their daily tasks and appointments with the help of the mobile
 In conclusion, our mobile reminder app is a useful tool that can make life easier, lessen stress, and make people more productive. Timely notifications, customization, and ease of use are among its primary benefits. It is novel because it is easy to use and works well, and its value comes from helping people save time and stay organized. If you're looking for a quick and easy way to keep track of your daily tasks and appointments, our mobile reminder app is a great choice.
   
 2 Competitive analysis 
+In today's fast-paced world, the demand for reminder apps has increased significantly. With so many apps available in the market, it becomes essential to analyze the competition and identify the key players to create a unique selling proposition for a new reminder app. A competitor for this remind app would be “Todoist”. 
+
+|Key Features|                  |Todoist|	                |Our Planned App|
+----------------------------------------------------------------------------
+|Customization|	                |Flexible|	              |More Flexible|
+|Task Organization|	            |Organization|	          |Better Organization|
+|Communication/Collaboration|	  |Teamwork Functionality|	|More Advanced|
+|Smarter Automation|	          |Basic|	                  |Advanced|
+|User-Interface|	              |Friendly for User|	      |More Friendly for User|
+
+In comparison to Todoist, our planned product will have some additional advantages:
+  1.	More customization options: Our product will offer greater flexibility for users to customize their task lists and workflows, allowing them to tailor the product to their individual needs and preferences.
+  2.	Enhanced task organization: Our product will provide more advanced organizational features, such as task grouping and prioritization, making it easier for users to manage and prioritize their to-do lists.
+  3.	Better communication and collaboration: Our product will facilitate seamless communication and collaboration among teams, with real-time updates and commenting functionality.
+  4.	Smarter automation: Our product will include more intelligent automation features, such as smart suggestions for task completion and personalized task recommendations based on usage history.
+  5.	Intuitive user interface: Our product will have a user-friendly interface with a modern and sleek design, making it easy for users to navigate and use the product.
+Overall, our planned product aims to build upon the core features of Todoist while offering more advanced functionality and customization options, enabling users to work more efficiently and effectively.
 
 3 Data definition 
 Notification Message: message sent to the user when the reminder is activated.
