@@ -37,6 +37,7 @@ Metadata: Data that defines and markets an app to consumers, like title, keyword
 Notification Message: message sent to the user when the reminder is activated.
 Offline use: since its a reminder app it should be able to be used with no internet.
 User: the person that decides to put a reminder.
+System: in this case our software is one of the entities having a direct relationship with the end user
 Type of Users: reminder app has a broad range of users, basically anyone that can use a mobile phone can be a target user, since all of need reminders of tasks.
 
 4 Overview, scenarios and use cases
