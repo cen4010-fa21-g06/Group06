@@ -31,7 +31,9 @@ App update: App update happens when developer offers new features in an app or c
 Binary search: to get stored and search of the different reminders.
 Data form reciever: a form that will hold all the data that a user enters for a specific task.
 Delay notification: if the user wants another reminder for them in a 5 min spam.
+End User: The person for which the app was intended for.
 Front-end frameworks: are JavaScript libraries with CSS and Bootstrap components that assist you in creating a website, web app, or mobile app.
+Metadata: Data that defines and markets an app to consumers, like title, keywords, description, icon, screenshots, company name, and category.
 Notification Message: message sent to the user when the reminder is activated.
 Offline use: since its a reminder app it should be able to be used with no internet.
 User: the person that decides to put a reminder.
