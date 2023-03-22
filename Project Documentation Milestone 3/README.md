@@ -3,6 +3,7 @@
 Milestone 3: More Detailed Requirements, Architecture and a Vertical Software Prototype
 
 2. Executive Summary
+
 If you're seeking for a fresh and easy way to remain on top of your day-to-day obligations, go no further than our smartphone reminder app. The application's intuitive layout makes it simple to schedule reminders for future activities and appointments, ensuring that users never forget a single detail.  Our mobile reminder software helps people live more relaxed lives by keeping track of their daily responsibilities, which is one of its main advantages. Users will never miss a meeting or a deadline because our app is designed to reliably notify them at the time, they need it. Additionally, the software can be customized to meet the needs of the user, allowing them to prioritize tasks and set reminders. Our smartphone reminder app is novel because of how easy it is to use. We designed our reminder software with the user in mind, making it easy to use even for people who don't know much about technology. 
 	 The user-friendliness of the software makes it accessible to anyone who wants to use it. Our mobile reminder app has value because it can streamline people's daily routines, allowing them to save time and work more efficiently. Our application is ideal for busy people who need to keep track of multiple tasks and stay organized. Individuals can avoid the stress and hassle of forgetting important events and appointments by using our application. People can manage their daily tasks and appointments with the help of the mobile reminder application, which is easy to use and convenient. Location- based reminders are also essential features of the application. This will allow users to set reminders based on their location, such as reminding them to buy groceries when they are near a supermarket. This feature requires the app to have access to the devices location based services.
 	The application's novelty lies in its simplicity and effectiveness, and its key advantages include customization, timely notifications, and user-friendliness. Individuals can simplify their lives, reduce stress, and increase productivity by utilizing the application. The application has value because it simplifies daily routines and helps people avoid forgetting important events and appointments. In general, the mobile reminder app is a great tool for anyone looking for a quick and easy way to keep track of their daily tasks and appointments. 
@@ -11,6 +12,7 @@ If you're seeking for a fresh and easy way to remain on top of your day-to-day o
 
 
 3. Competitive analysis
+
 In today's fast-paced world, the demand for reminder apps has increased significantly. With so many apps available in the market, it becomes essential to analyze the competition and identify the key players to create a unique selling proposition for a new reminder app. A competitor for this remind app would be “Todoist”. 
 
 Key Features	Todoist	RemindAll (Our Planned App)
@@ -35,6 +37,7 @@ In comparison to Todoist, our planned product will have some additional advantag
 Overall, our planned product aims to build upon the core features of Todoist while offering more advanced functionality and customization options, enabling users to work more efficiently and effectively.
 
 4. Data definition
+
 App ID: Every app deployed to the App Engine is identified by the Application ID and its version.
 App update: App update happens when developer offers new features in an app or change the look or design of an app.
 Binary search: to get stored and search of the different reminders.
@@ -50,9 +53,11 @@ System: in this case our software is one of the entities having a direct relatio
 Type of Users: reminder app has a broad range of users, basically anyone that can use a mobile phone can be a target user, since all of need reminders of tasks.
 
 5. Overview, scenarios and use cases
+
 This reminder app is intended to help users remember important events, tasks, and Important things that the users want to save daily. For example, a college student will use this app in different scenarios such as remembering an assignment, remembering a doctor's appointment, remembering a particular task from work, remembering to buy something from the store, or maybe make a phone call to check on their parents or partner. This college student will take out his or her phone to type a message and set a time and date for the reminder and then continue with his day until the task is completed. This college student does not need to have any skill other than knowing how to use a mobile phone to set reminders in the app. Besides that, it does not require any specific skill.
 
 6. High-level functional requirements
+
 1.	Allow users to create multiple reminder lists for different purposes: This requirement allows users to create and organize their reminders into separate lists based on different categories such as work, personal, fitness, etc. This helps users keep their reminders organized and easy to manage.
 2.	Provide a range of customization options for each reminder: Users need the ability to customize their reminders as per their needs. This includes setting a specific date and time, location, repeating frequency (daily, weekly, monthly, yearly), and priority level. This ensures that users receive reminders at the right time and with the right frequency.
 3.	Allow users to categorize their reminders using tags or labels: This requirement allows users to add tags or labels to their reminders for easy sorting and filtering. For example, users can add the "work" tag to their work-related reminders, and the
@@ -65,6 +70,7 @@ This reminder app is intended to help users remember important events, tasks, an
 
 
 7. List of non-functional requirements
+
     1. Performance: The mobile app must be fast and responsive, with minimal loading times and low memory consumption. The app must respond to user input    within 1 second.
   	2. Usability: The mobile app must be intuitive and user-friendly, with clear and concise instructions for all features. The design must be optimized for mobile devices and should support gestures like swipe and pinch.
   	3. Accessibility: The mobile app must meet the standards of WCAG 2.1, with support for screen readers, large text sizes, and high contrast modes. The app must be compatible with both iOS and Android accessibility features.
@@ -76,6 +82,7 @@ This reminder app is intended to help users remember important events, tasks, an
 
 
 8. High-level system architecture and database organization
+
 Our mobile reminder app uses Node.js and Express, two very popular tools in the JavaScript ecosystem.
 Node.js provides an event driven model which makes it very light weight and efficient.
 Express on the other hand, is a web application framework that simplifies the process of building APIs and web applications.
