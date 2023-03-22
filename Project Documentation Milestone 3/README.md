@@ -16,6 +16,7 @@ If you're seeking for a fresh and easy way to remain on top of your day-to-day o
 In today's fast-paced world, the demand for reminder apps has increased significantly. With so many apps available in the market, it becomes essential to analyze the competition and identify the key players to create a unique selling proposition for a new reminder app. A competitor for this remind app would be “Todoist”. 
 
 Key Features			Todoist	RemindAll 		(Our Planned App)
+
 Customization			Flexible			More Flexible
 
 Task Organization    		Organization			Better Organization
