@@ -90,20 +90,34 @@ Express on the other hand, is a web application framework that simplifies the pr
 The integration of both allows our application to handle requests and responses efficiently, which in turn makes it fast and responsive.
 Additionally, the usage of JavaScript for both the client and server side reduces development time and simplifies code maintenance. 
   Programming languages:
+  
    1.Javascript
    2.CSS
+   
    3.HTML
+   
   Tools:
+  
    1.Git
+   
    2.Github
+   
    3.Visual Studio Code
+   
   Supported Browsers:
+  
    1.Google chrome
+   
    2.Safari
+   
    3.Microsoft edge
+   
   Core APIs:
+  
    1.Google Maps API
+   
    2.Stripe API
+   
    3.OpenWeatherMap API
 
 9. High-Level UML diagrams
