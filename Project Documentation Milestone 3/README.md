@@ -59,15 +59,15 @@ This reminder app is intended to help users remember important events, tasks, an
 
 6. High-level functional requirements
 
-1.	Allow users to create multiple reminder lists for different purposes: This requirement allows users to create and organize their reminders into separate lists based on different categories such as work, personal, fitness, etc. This helps users keep their reminders organized and easy to manage.
-2.	Provide a range of customization options for each reminder: Users need the ability to customize their reminders as per their needs. This includes setting a specific date and time, location, repeating frequency (daily, weekly, monthly, yearly), and priority level. This ensures that users receive reminders at the right time and with the right frequency.
-3.	Allow users to categorize their reminders using tags or labels: This requirement allows users to add tags or labels to their reminders for easy sorting and filtering. For example, users can add the "work" tag to their work-related reminders, and the
+	1. Allow users to create multiple reminder lists for different purposes: This requirement allows users to create and organize their reminders into separate lists based on different categories such as work, personal, fitness, etc. This helps users keep their reminders organized and easy to manage.
+	2.	Provide a range of customization options for each reminder: Users need the ability to customize their reminders as per their needs. This includes setting a specific date and time, location, repeating frequency (daily, weekly, monthly, yearly), and priority level. This ensures that users receive reminders at the right time and with the right frequency.
+	3.	Allow users to categorize their reminders using tags or labels: This requirement allows users to add tags or labels to their reminders for easy sorting and filtering. For example, users can add the "work" tag to their work-related reminders, and the
 "personal" tag to their personal reminders.
-4.	Provide various reminder types: Users may prefer different types of reminders, such as simple notifications, sound alarms, or vibration. Providing multiple reminder types helps users choose the most appropriate type for their specific needs.
-5.	Enable users to share their reminder lists with other users or export them to other apps or devices: This requirement allows users to share their reminder lists with others, such as family or colleagues or export them to other apps or devices. This ensures that users can access their reminders from any device or share them with others easily.
-6.	Provide a snooze function: This requirement allows users to delay a reminder for a specific period of time, such as 5 minutes or 10 minutes. This is helpful when users are busy or not able to attend to the reminder application immediately.
-7.	Offer a user friendly interface: The app will have a user friendly interface with easy navigation, intuitive controls and an appealing design, This will ensure that the users can use the app without any difficulty and enjoy a good user experience.
-8.	Allows users to set reminders based on their location: This requirement allows users to set reminders based on their location, such as reminding them to buy grocery if they are near a supermarket.
+	4.	Provide various reminder types: Users may prefer different types of reminders, such as simple notifications, sound alarms, or vibration. Providing multiple reminder types helps users choose the most appropriate type for their specific needs.
+	5.	Enable users to share their reminder lists with other users or export them to other apps or devices: This requirement allows users to share their reminder lists with others, such as family or colleagues or export them to other apps or devices. This ensures that users can access their reminders from any device or share them with others easily.
+	6.	Provide a snooze function: This requirement allows users to delay a reminder for a specific period of time, such as 5 minutes or 10 minutes. This is helpful when users are busy or not able to attend to the reminder application immediately.
+	7.	Offer a user friendly interface: The app will have a user friendly interface with easy navigation, intuitive controls and an appealing design, This will ensure that the users can use the app without any difficulty and enjoy a good user experience.
+	8.	Allows users to set reminders based on their location: This requirement allows users to set reminders based on their location, such as reminding them to buy grocery if they are near a supermarket.
 
 
 7. List of non-functional requirements
