@@ -84,7 +84,7 @@ This reminder app is intended to help users remember important events, tasks, an
 
 8. High-level system architecture and database organization
 
-Our mobile reminder app uses Node.js and Express, two very popular tools in the JavaScript ecosystem.
+1)	Our mobile reminder app uses Node.js and Express, two very popular tools in the JavaScript ecosystem.
 Node.js provides an event driven model which makes it very light weight and efficient.
 Express on the other hand, is a web application framework that simplifies the process of building APIs and web applications.
 The integration of both allows our application to handle requests and responses efficiently, which in turn makes it fast and responsive.
@@ -112,8 +112,13 @@ Additionally, the usage of JavaScript for both the client and server side reduce
    2.Safari
    
    3.Microsoft edge
-   
-  Core APIs:
+  2)	The main DB schema has two main tables, one for the email and password of each user so each person can have their private remainders on their account both fields are required. The second main table is the one for the events, an event is required to have a title, priority, and time attribute, in addition, a user has the option to add data like a description of the reminder, and location for where the event will occur. Then we have a dependent table that will inherit the values of the event table called recurrent events, which will have an extra attribute for the schedule in which the event is expected to be repeated. This dependent table is a subdivision of a main table, and the schedule attribute is a required field.
+ 3)	RememberAll app is expected to keep data like GPS data and locations stored to help users remember events or actions that they need to do when they are at specific locations. This data needs to be saved in the DB because we need to keep track of special locations.
+ 
+ 4)	The algorithm will search for specific fields like time, and location since events are either needed at a specific time or in a special location. The DB will be sorted by either priority (most likely) or by time. 
+
+
+  5)	Core APIs:
   
    1.Google Maps API
    
