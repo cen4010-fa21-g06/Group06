@@ -55,7 +55,35 @@ Type of Users: reminder app has a broad range of users, basically anyone that ca
 
 5. Overview, scenarios and use cases
 
-This reminder app is intended to help users remember important events, tasks, and Important things that the users want to save daily. For example, a college student will use this app in different scenarios such as remembering an assignment, remembering a doctor's appointment, remembering a particular task from work, remembering to buy something from the store, or maybe make a phone call to check on their parents or partner. This college student will take out his or her phone to type a message and set a time and date for the reminder and then continue with his day until the task is completed. This college student does not need to have any skill other than knowing how to use a mobile phone to set reminders in the app. Besides that, it does not require any specific skill.
+
+	The mobile reminder app is a productivity tool designed to help users remember important events, deadlines, and appointments. It will be available on iOS platforms. A mobile reminder app is a software application designed to help users remember important events, appointments, or tasks. The app provides users with the ability to set reminders for specific dates and times and can send notifications to their mobile devices to ensure they don't forget. 
+
+Busy Professional:
+As a busy professional, John has a lot of meetings and appointments to attend each week. He needs to ensure that he doesn't forget any important events, so he uses the mobile reminder app to set reminders for each appointment. The app sends notifications to his phone prior to the event, ensuring that he never forgets an important meeting.
+
+
+
+
+Forgetful Student:
+As a forgetful student, Alice has trouble remembering her homework assignments and upcoming exams. She uses the mobile reminder app to set reminders for each assignment. The app sends notifications to her phone, ensuring that she stays on top of her academic responsibilities.
+
+Fitness Enthusiast:
+As a fitness enthusiast, Mike needs to stay on track with his workout schedule. He uses the mobile reminder app to set reminders for each workout session. The app sends notifications to his phone, ensuring that he never misses a workout.
+
+
+Reminder for Medication:
+The mobile reminder app can be used by individuals who need to take medication at specific times each day. The app can be used to set reminders for medication, ensuring that the user never forgets to take their medication.
+
+Reminder for Appointments:
+The mobile reminder app can be used to set reminders for important appointments, such as doctor's visits or meetings. The app sends notifications to the user's phone, ensuring that they don't forget about their appointments.
+
+Reminder for Important Dates:
+The mobile reminder app can be used to set reminders for important dates, such as birthdays, anniversaries, or other special occasions. The app sends notifications to the user's phone, ensuring that they don't forget about these important events.
+
+Reminder for Tasks:
+The mobile reminder app can be used to set reminders for tasks that need to be completed, such as paying bills or completing household chores. The app sends notifications to the user's phone, ensuring that they stay on top of their responsibilities.
+
+Overall, the mobile reminder app is a useful tool for anyone who needs help staying organized and managing their time effectively. It is easy to use, customizable, and helps users remember important events and tasks.
 
 6. High-level functional requirements
 
@@ -84,32 +112,41 @@ This reminder app is intended to help users remember important events, tasks, an
 
 8. High-level system architecture and database organization
 
-1)	Our mobile reminder app uses Node.js and Express, two very popular tools in the JavaScript ecosystem.
+1)	Proposal: 
+The mobile reminder app we propose to build will be developed for iOS using native iOS frameworks and programming languages such as Swift and Objective-C. The app will allow users to set reminders for various tasks and events, including appointments, deadlines, and recurring events. The app will also have a feature for location-based reminders that trigger when the user enters or exits a specified location.
+
+High-level system architecture: 
+The app will consist of a client-side iOS application and a server-side API for syncing and backup purposes. The app will be developed using Xcode, Apple's integrated development environment (IDE), which includes a suite of tools for designing, building, and testing iOS applications.
+The client-side application will be built using Swift and Objective-C and will utilize Apple's Core Data framework for storing and managing data. The app will also use Apple's Location Services framework for location-based reminders.
+The server-side API will be built using Node.js and will utilize a RESTful API architecture for communication with the client-side application. The API will be responsible for syncing reminders across multiple devices and providing backup and restores functionality. The API will also utilize a database system for storing user data, which will be encrypted and secured using industry-standard security protocols.
+Our mobile reminder app uses Node.js and Express, two very popular tools in the JavaScript ecosystem.
 Node.js provides an event driven model which makes it very light weight and efficient.
 Express on the other hand, is a web application framework that simplifies the process of building APIs and web applications.
 The integration of both allows our application to handle requests and responses efficiently, which in turn makes it fast and responsive.
 Additionally, the usage of JavaScript for both the client and server side reduces development time and simplifies code maintenance. 
-  Programming languages:
-  
+ 
+Programming languages:
    1.Javascript
-   
    2.CSS
-   
    3.HTML
-   
   Tools:
-  
    1.Git
-   
    2.Github
-   
    3.Visual Studio Code
-   
   Supported Browsers:
-  
    1.Google chrome
-   
    2.Safari
+   3.Microsoft edge
+  Core APIs:
+   1.Google Maps API
+   2.Stripe API
+   3.OpenWeatherMap API
+List of core APIs available at this point:
+ Apple's Core Data and Location Services frameworks RESTful API for syncing and backup purposes Supported browsers:
+
+The proposal outlines a high-level system architecture for a mobile reminder app that will be developed for iOS using native iOS frameworks and programming languages such as Swift and Objective-C. The app will consist of a client-side iOS application and a server-side API for syncing and backup purposes. The client-side application will use Apple's Core Data and Location Services frameworks, and the server-side API will be built using Node.js and will utilize a RESTful API architecture. The system will also utilize a database system for storing user data, which will be encrypted and secured using industry-standard security protocols. No external frameworks or code libraries are planned to be used at this time.
+
+
    
    3.Microsoft edge
   2)	The main DB schema has two main tables, one for the email and password of each user so each person can have their private remainders on their account both fields are required. The second main table is the one for the events, an event is required to have a title, priority, and time attribute, in addition, a user has the option to add data like a description of the reminder, and location for where the event will occur. Then we have a dependent table that will inherit the values of the event table called recurrent events, which will have an extra attribute for the schedule in which the event is expected to be repeated. This dependent table is a subdivision of a main table, and the schedule attribute is a required field.
