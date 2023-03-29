@@ -168,10 +168,10 @@ The proposal outlines a high-level system architecture for a mobile reminder app
 
 10. Identify actual key risks for your project at this time
 
-1.	Skills risks: There may be a risk that the team members don't have the required skills to complete the project successfully. This risk can be mitigated by identifying the skills needed for the project and ensuring that the team has access to training or hiring new members with the required skills.
-2.	Schedule risks: There may be a risk that the project schedule is too ambitious or that unexpected delays occur, causing the project to be delayed. This risk can be mitigated by setting realistic timelines, identifying potential roadblocks, and having contingency plans in place.
-3.	Technical risks: There may be a risk that the technology used for the project is not suitable or that technical problems arise during the development process. This risk can be mitigated by thoroughly testing the technology before using it, having backup plans in place, and involving technical experts in the development process.
-4.	Teamwork risks: There may be a risk that communication or collaboration problems arise among team members, causing delays or misunderstandings. This risk can be mitigated by establishing clear communication channels, having regular meetings to discuss progress and issues, and promoting a positive team culture.
-5.	Legal/content risks: There may be a risk that the content or software used for the project is not legally obtained or licensed. This risk can be mitigated by ensuring that all content and software used for the project is legally obtained and properly licensed.
+	1.	Skills risks: There may be a risk that the team members don't have the required skills to complete the project successfully. This risk can be mitigated by identifying the skills needed for the project and ensuring that the team has access to training or hiring new members with the required skills.
+	2.	Schedule risks: There may be a risk that the project schedule is too ambitious or that unexpected delays occur, causing the project to be delayed. This risk can be mitigated by setting realistic timelines, identifying potential roadblocks, and having contingency plans in place.
+	3.	Technical risks: There may be a risk that the technology used for the project is not suitable or that technical problems arise during the development process. This risk can be mitigated by thoroughly testing the technology before using it, having backup plans in place, and involving technical experts in the development process.
+	4.	Teamwork risks: There may be a risk that communication or collaboration problems arise among team members, causing delays or misunderstandings. This risk can be mitigated by establishing clear communication channels, having regular meetings to discuss progress and issues, and promoting a positive team culture.
+	5.	Legal/content risks: There may be a risk that the content or software used for the project is not legally obtained or licensed. This risk can be mitigated by ensuring that all content and software used for the project is legally obtained and properly licensed.
 
 
