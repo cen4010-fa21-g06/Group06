@@ -37,17 +37,29 @@ Overall, our planned product aims to build upon the core features of Todoist whi
 4 Data definition
 
 App ID: Every app deployed to the App Engine is identified by the Application ID and its version.
+
 App update: App update happens when developer offers new features in an app or change the look or design of an app.
+
 Binary search: to get stored and search of the different reminders.
+
 Data form receiver: a form that will hold all the data that a user enters for a specific task.
+
 Delay notification: if the user wants another reminder for them in a 5 min spam.
+
 End User: The person for which the app was intended for.
+
 Front-end frameworks: are JavaScript libraries with CSS and Bootstrap components that assist you in creating a website, web app, or mobile app.
+
 Metadata: Data that defines and markets an app to consumers, like title, keywords, description, icon, screenshots, company name, and category.
+
 Notification Message: message sent to the user when the reminder is activated.
+
 Offline use: since it’s a reminder app it should be able to be used with no internet.
+
 User: the person that decides to put a reminder.
+
 System: in this case our software is one of the entities having a direct relationship with the end user
+
 Type of Users: reminder app has a broad range of users, basically anyone that can use a mobile phone can be a target user, since all of need reminders of tasks.
 
 5. Overview, scenarios and use cases
