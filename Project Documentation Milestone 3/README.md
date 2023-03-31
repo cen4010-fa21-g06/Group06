@@ -14,20 +14,17 @@ If you're seeking for a fresh and easy way to remain on top of your day-to-day o
 3. Competitive analysis
 
 In today's fast-paced world, the demand for reminder apps has increased significantly. With so many apps available in the market, it becomes essential to analyze the competition and identify the key players to create a unique selling proposition for a new reminder app. A competitor for this remind app would be “Todoist”. 
-
-Key Features	|			Todoist	RemindAll 	|		(Our Planned App)
-
-Customization		|		Flexible		|		More Flexible
-
-Task Organization    		|	Organization		|		Better Organization
-
-Communication/Collaboration    	|	Teamwork Functionality   |		More Advanced
-
-Smarter Automation	|		Basic			|		Advanced
-
-User-Interface		|		Friendly for User	|		More Friendly for User
+Key Features  | Todoist | RemindAll(Our Planned App) |
+------------- | ------------- |	------------ |
+Customization  | Flexible  | More Flexible		     |
+Task Organization  | Organization  |	Better Organization	     |
+Communication/Collaboration  | Teamwork Functionality  |	More Advanced	     |
+Smarter Automation  | Basic  |	Advanced	     |
+User-Interface  | Friendly for User  |	More Friendly for User	     |
 
 
+
+	       
 
 In comparison to Todoist, our planned product will have some additional advantages:
   1.	More customization options: Our product will offer greater flexibility for users to customize their task lists and workflows, allowing them to tailor the product to their individual needs and preferences.
