@@ -34,7 +34,7 @@ In comparison to Todoist, our planned product will have some additional advantag
   5.	Intuitive user interface: Our product will have a user-friendly interface with a modern and sleek design, making it easy for users to navigate and use the product.
 Overall, our planned product aims to build upon the core features of Todoist while offering more advanced functionality and customization options, enabling users to work more efficiently and effectively.
 
-4. Data definition
+4 Data definition
 
 App ID: Every app deployed to the App Engine is identified by the Application ID and its version.
 App update: App update happens when developer offers new features in an app or change the look or design of an app.
@@ -123,22 +123,39 @@ The integration of both allows our application to handle requests and responses 
 Additionally, the usage of JavaScript for both the client and server side reduces development time and simplifies code maintenance. 
  
 Programming languages:
-   1.Javascript
-   2.CSS
-   3.HTML
+
+   	1.Javascript
+   
+   	2.CSS
+   
+   	3.HTML
+   
   Tools:
-   1.Git
-   2.Github
-   3.Visual Studio Code
+  
+  	 1.Git
+   
+   	2.Github
+   
+   	3.Visual Studio Code
+   
   Supported Browsers:
-   1.Google chrome
-   2.Safari
-   3.Microsoft edge
+  
+  	 1.Google chrome
+   
+   	2.Safari
+   
+   	3.Microsoft edge
+   
   Core APIs:
-   1.Google Maps API
-   2.Stripe API
-   3.OpenWeatherMap API
+  
+   	1.Google Maps API
+   
+   	2.Stripe API
+   
+   	3.OpenWeatherMap API
+   
 List of core APIs available at this point:
+
  Apple's Core Data and Location Services frameworks RESTful API for syncing and backup purposes Supported browsers:
 
 The proposal outlines a high-level system architecture for a mobile reminder app that will be developed for iOS using native iOS frameworks and programming languages such as Swift and Objective-C. The app will consist of a client-side iOS application and a server-side API for syncing and backup purposes. The client-side application will use Apple's Core Data and Location Services frameworks, and the server-side API will be built using Node.js and will utilize a RESTful API architecture. The system will also utilize a database system for storing user data, which will be encrypted and secured using industry-standard security protocols. No external frameworks or code libraries are planned to be used at this time.
@@ -146,7 +163,8 @@ The proposal outlines a high-level system architecture for a mobile reminder app
 
    
    3.Microsoft edge
-  2)	The main DB schema has two main tables, one for the email and password of each user so each person can have their private remainders on their account both fields are required. The second main table is the one for the events, an event is required to have a title, priority, and time attribute, in addition, a user has the option to add data like a description of the reminder, and location for where the event will occur. Then we have a dependent table that will inherit the values of the event table called recurrent events, which will have an extra attribute for the schedule in which the event is expected to be repeated. This dependent table is a subdivision of a main table, and the schedule attribute is a required field.
+   
+  2)	The main DB schema has two main tables. The first table is the one for the email and password of each user so each person can have their private remainders on their account both fields are required. The second main table is the one for the events. An event is required to have a title, priority, and time attribute. In addition, a user has the option to add data like a description of the reminder and location for where the event will occur. Also, we have a dependent table that will inherit the values of the event table called recurrent events which will have an extra attribute for the schedule in which the event is expected to be repeated. This dependent table is a subdivision of a main table and the schedule attribute is a required field.
  3)	RememberAll app is expected to keep data like GPS data and locations stored to help users remember events or actions that they need to do when they are at specific locations. This data needs to be saved in the DB because we need to keep track of special locations.
  
  4)	The algorithm will search for specific fields like time, and location since events are either needed at a specific time or in a special location. The DB will be sorted by either priority (most likely) or by time. 
@@ -154,11 +172,11 @@ The proposal outlines a high-level system architecture for a mobile reminder app
 
   5)	Core APIs:
   
-   1.Google Maps API
+   	1.Google Maps API
    
-   2.Stripe API
+  	 2.Stripe API
    
-   3.OpenWeatherMap API
+   	3.OpenWeatherMap API
 
 9. High-Level UML diagrams
 
