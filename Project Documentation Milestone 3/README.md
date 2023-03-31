@@ -96,7 +96,7 @@ Overall, the mobile reminder app is a useful tool for anyone who needs help stay
 
 6. High-level functional requirements
 
-	1. Allow users to create multiple reminder lists for different purposes: This requirement allows users to create and organize their reminders into separate lists based on different categories such as work, personal, fitness, etc. This helps users keep their reminders organized and easy to manage.
+	1. Allow users to create multiple reminder list for different purposes: This requirement allows users to create and organize their reminders into separate lists based on different categories such as work, personal, fitness, etc. This helps users keep their reminders organized and easy to manage.
 	2.	Provide a range of customization options for each reminder: Users need the ability to customize their reminders as per their needs. This includes setting a specific date and time, location, repeating frequency (daily, weekly, monthly, yearly), and priority level. This ensures that users receive reminders at the right time and with the right frequency.
 	3.	Allow users to categorize their reminders using tags or labels: This requirement allows users to add tags or labels to their reminders for easy sorting and filtering. For example, users can add the "work" tag to their work-related reminders, and the
 "personal" tag to their personal reminders.
@@ -121,11 +121,32 @@ Overall, the mobile reminder app is a useful tool for anyone who needs help stay
 
 8. High-level system architecture and database organization
 
-1)	Proposal: 
+Proposal: 
 The mobile reminder app we propose to build will be developed for iOS using native iOS frameworks and programming languages such as Swift and Objective-C. The app will allow users to set reminders for various tasks and events, including appointments, deadlines, and recurring events. The app will also have a feature for location-based reminders that trigger when the user enters or exits a specified location.
+A UML class diagram is a suitable visual representation of the code architecture. The class diagram will have classes like Reminder, User, Category and Notification. A reminder’s title, description, date, time and location will all be stored in the Reminder class. A user’s name, email address and password are stored in the user class. The Notification class will house information about alerts that were delivered to the user, while the Class class will house categories for reminders.
+The relationships between the classes will be visualized using UML associations. To demonstrate how each reminder can be connected to a category, the Category class will be linked to the Reminder class, for example. The User class will be connected to the Reminder class in a similar way, indicating that one user may have numerous reminders.
+DB Organization:
+Four tables will make up the core database structure for the mobile reminder app: Users, Reminders, Notifications, and Categories. The Users table will keep track of user login information including username and passwords as well as any user profile data like email or name. The Name, Description, Due Date, and Category of each individual reminder will be stored in the Reminders table. Each reminder will have a special ID that will allow the database to recognize it. Other fields in the table, like repetition frequency or notes, may also be present. Information about each notification that must be sent for a reminder, such as the notification time and the device to send it to, will be stored in the Notifications table. Each notification's ID will be used to link it to a specific reminder.
+The many categories of reminders that the user can select from will be stored in the Categories table. Each category will have its own ID, name, and sometimes a color code. Overall, the database structure is built to effectively store and retrieve reminder-related data, and links between the various tables are constructed to guarantee data consistency and integrity.
+
+To inform the user of any changes to their reminders, the app can also use the Observer pattern in addition to the MVC design. A push notification system will be used to implement the Observer pattern; when a reminder is approaching, alerts will be sent to the user's smartphone.
+With an emphasis on scalability, maintainability, and usability, the high-level architecture of the code will generally adhere to accepted principles of software architecture and design patterns.
+Media Storage:
+It is typically advised to store large media items like pictures, films, and music in a file system rather than a database. Hence, it is advised to just keep references to photos and videos in the database for the reminder mobile app and to store them in a file system.
+
+Instead of keeping the accompanying image or video file itself in the database, the Reminders table, for instance, could have a field for storing the file path or URL. This strategy is more effective and makes managing and backing up media files simpler.
+
+While storing GPS data in the database, the app can use standardized GPS data formats like latitude and longitude. The software can also use common audio file formats for audio data, including MP3 or WAV, and keep the file path or URL in the database. The secret is to adopt uniform formats that work with the app's functionality and are simple to read.
+
+Search/Filter Architecture and Implementation:
+The reminder mobile app's search/filter algorithm will be determined by the search criteria and 
+the sorts of data being searched. 
+For instance, the app might offer search parameters for reminders that are overdue, today's deadline, or related with a specific tag. Reminder titles, due dates, tags, and other reminder related metadata will all be looked for in the database.These terms will be kept in the database's Reminders table as fields.
+
 
 High-level system architecture: 
-The app will consist of a client-side iOS application and a server-side API for syncing and backup purposes. The app will be developed using Xcode, Apple's integrated development environment (IDE), which includes a suite of tools for designing, building, and testing iOS applications.
+The app will consist of a client-side iOS application and a server-side API for syncing and backup purposes. The app will be developed using Xcode, Apple's integrated development environment (IDE), which includes a suite of tools for designing, building, and testing iOS applications. 
+
 The client-side application will be built using Swift and Objective-C and will utilize Apple's Core Data framework for storing and managing data. The app will also use Apple's Location Services framework for location-based reminders.
 The server-side API will be built using Node.js and will utilize a RESTful API architecture for communication with the client-side application. The API will be responsible for syncing reminders across multiple devices and providing backup and restores functionality. The API will also utilize a database system for storing user data, which will be encrypted and secured using industry-standard security protocols.
 Our mobile reminder app uses Node.js and Express, two very popular tools in the JavaScript ecosystem.
@@ -135,44 +156,34 @@ The integration of both allows our application to handle requests and responses 
 Additionally, the usage of JavaScript for both the client and server side reduces development time and simplifies code maintenance. 
  
 Programming languages:
-
-   	1.Javascript
-   
-   	2.CSS
-   
-   	3.HTML
-   
+   1.Javascript
+   2.CSS
+   3.HTML
   Tools:
-  
-  	 1.Git
-   
-   	2.Github
-   
-   	3.Visual Studio Code
-   
+   1.Git
+   2.Github
+   3.Visual Studio Code
   Supported Browsers:
-  
-  	 1.Google chrome
-   
-   	2.Safari
-   
-   	3.Microsoft edge
-   
+   1.Google chrome
+   2.Safari
+   3.Microsoft edge
   Core APIs:
-  
-   	1.Google Maps API
-   
-   	2.Stripe API
-   
-   	3.OpenWeatherMap API
-   
+   1.Google Maps API
+   2.Stripe API
+   3.OpenWeatherMap API
 List of core APIs available at this point:
-
  Apple's Core Data and Location Services frameworks RESTful API for syncing and backup purposes Supported browsers:
 
-The proposal outlines a high-level system architecture for a mobile reminder app that will be developed for iOS using native iOS frameworks and programming languages such as Swift and Objective-C. The app will consist of a client-side iOS application and a server-side API for syncing and backup purposes. The client-side application will use Apple's Core Data and Location Services frameworks, and the server-side API will be built using Node.js and will utilize a RESTful API architecture. The system will also utilize a database system for storing user data, which will be encrypted and secured using industry-standard security protocols. No external frameworks or code libraries are planned to be used at this time.
+Non-Trivial Algorithm: 
+Reminders will be ranked in the app according to their urgency and importance using an algorithm. Users can customize each reminder's urgency and importance levels in the app, and the app will prioritize reminders depending on these settings. Additionally, the app will automatically reschedule reminders, if necessary, based on machine learning algorithms that anticipate the likelihood that a user will finish a reminder.
+Automatic ranking of reminders based on their urgency or importance is one non-trivial technique that might be employed in this reminder software. 
+This might be accomplished by giving each reminder a priority score depending on the reminders due date, time-sensitivity level, and user-defined tags or labels. 
+The reminders might then be sorted by priority, with the most urgent or significant ones at the 
+top of the list.
 
-
+A weighted scoring system, in which various elements are assigned various weights based on their relative importance, could be used by the algorithm to determine the priority score. 
+For instance, the due date can be given a higher priority than the tag or label. 
+The algorithm might also dynamically change the weightings based on user feedback and behaviour, making the prioritising more individualised and suited to the user's requirements over time.
    
    3.Microsoft edge
    
