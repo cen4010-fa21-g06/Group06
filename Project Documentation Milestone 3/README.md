@@ -202,7 +202,10 @@ The algorithm might also dynamically change the weightings based on user feedbac
    	3.OpenWeatherMap API
 
 9. High-Level UML diagrams
-
+	Class Diagram
+![Screenshot (2177)](https://user-images.githubusercontent.com/114449925/229259974-06fcc3de-3c9c-4d2c-9e17-78e76ccc13cf.png)
+	Component & Deployment Diagrams
+![Screenshot (2178)](https://user-images.githubusercontent.com/114449925/229259980-9f849f21-5d91-4a1f-9d96-e538c04ae4be.png)
 
 10. Identify actual key risks for your project at this time
 
