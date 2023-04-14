@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reminders</title>
+  </head>
+  <body>
+    <h1>Reminders</h1>
+    <% if (reminders.length === 0) { %>
+      <p>No reminders yet.</p>
+    <% } else { %>
+      <ul>
+        <% reminders.forEach((reminder) => { %>
+          <li>
+            <h2><%= reminder.title %></h2>
+            <p><%= reminder.description %></p>
+            <p><%= reminder.date %></p>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+    <a href="/addReminder">Add Reminder</a>
+  </body>
+</html>
