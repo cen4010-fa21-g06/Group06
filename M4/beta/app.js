@@ -27,16 +27,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 // Define routes
-// app.get('/', async (req, res) => {
-//   const reminders = await Reminder.find({});
-//   res.render('index', { reminders });
-// });
-
-// Home page
 app.get('/', async (req, res) => {
   const reminders = await Reminder.find({});
-  res.render('home', { reminders });
+  res.render('index', { reminders });
 });
+
+// // Home page
+// app.get('/', async (req, res) => {
+//   const reminders = await Reminder.find({});
+//   res.render('home', { reminders });
+// });
 
 // Display single reminder
 app.get('/reminders/:id', async (req, res) => {
