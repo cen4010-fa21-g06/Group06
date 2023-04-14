@@ -27,9 +27,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 // Define routes
-app.get('/', async (req, res) => {
-  const reminders = await Reminder.find({});
-  res.render('index', { reminders });
+// app.get('/', async (req, res) => {
+//   const reminders = await Reminder.find({});
+//   res.render('index', { reminders });
+// });
+
+// Home page
+app.get('/', function(req, res) {
+  res.render('home');
 });
 
 // Display single reminder
@@ -85,12 +90,6 @@ app.delete('/reminders/:id', async (req, res) => {
   const { id } = req.params;
   await Reminder.findByIdAndDelete(id);
   res.sendStatus(204);
-});
-
-// Home handle
-
-app.get('/', function(req, res) {
-  res.render('home');
 });
 
 
