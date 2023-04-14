@@ -38,4 +38,15 @@ For example, if the user goes to a grocery store RememberAll will send a notific
 2.	When a user passes near a pharmacy ask the user if he wants to stop and buy the medicine that he needs. If the user selects no, delay until a specific time or the next time he passes by a pharmacy. 
 3.	 If the user passes near a UPS store the RememberAll web app will send a notification reminding the user to collect a package.
 
+2.5 Code Review
+
+2.6 Self-check on best practices for security
+
+1. User data: This includes information such as user login credentials, personal information, and any reminder data that users input into the app.
+2. App code and infrastructure: This includes the software code that the app is built on, the servers and databases that it runs on, and any APIs or other third-party services that the app integrates with.
+3. User privacy: This includes protecting user data from unauthorized access or theft, as well as ensuring that user data is not shared with third parties without the user's consent.
+4. Availability: This includes ensuring that the app is always accessible to users, and that any disruptions or downtime are minimized.
+5. Intellectual property: This includes protecting any trademarks, patents, or other intellectual property that the app may have, as well as ensuring that the app does not infringe on the intellectual property of others.
+
+
 
