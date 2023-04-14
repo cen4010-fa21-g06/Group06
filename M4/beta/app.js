@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
+require('dotenv').config();
 
 // Set up view engine
 app.set('views', path.join(__dirname, 'views'));
@@ -60,6 +61,6 @@ app.delete('/reminders/:id', async (req, res) => {
 });
 
 // Start server
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server listening on port ${port}`));
 
