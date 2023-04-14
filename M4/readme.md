@@ -1,5 +1,23 @@
 2.1 Title page
 
+CEN 4010 Principles of Software Engineering
+
+Spring 2023
+
+Milestone 4: Milestone 4 Beta Launch and Reviews
+
+RememberAll
+
+Team 6
+| Group Members  | Roles | Emails |
+| ------------- | ------------- | ------------- |
+| Kyle Palmer  | Scrum Master  | kylepalmer2021@fau.edu |
+| Abby Denton  | Product Owner  | adenton2016@fau.edu |
+| Juan Rivera | Develop Team  | Jriveraa102@gmail.com |
+| Christopher Rodriguez  | Develop Team  | rodriguezc2020@fau.edu |
+
+April 14, 2023
+
 
 2.2 Product summary
 
