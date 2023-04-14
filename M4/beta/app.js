@@ -3,7 +3,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
-require('dotenv').config();
 
 // Set up view engine
 app.set('views', path.join(__dirname, 'views'));
