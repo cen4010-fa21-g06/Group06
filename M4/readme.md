@@ -4,7 +4,7 @@ CEN 4010 Principles of Software Engineering
 
 Spring 2023
 
-Milestone 4: Milestone 4 Beta Launch and Reviews
+Milestone 4: Beta Launch and Reviews
 
 RememberAll
 
