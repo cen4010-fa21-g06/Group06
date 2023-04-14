@@ -21,6 +21,7 @@ Unique Features: RemindAll offers personalized reminders that adapt to your beha
 
 2.3 Usability test plan
 
+
 2.4 QA test plan: function Geolocation.
 1)	Test objectives: The objectives for RememberAll software QA test is to check if the web app can keep track of the user events and important tasks of the user. Also to make a general test of all the functions like add, delete, get recurrent events, sort events by priority or time, and Geo location. 
 This Test will check if RememberAll recognizes when the user is near a location where the user has added an event and send a notification to remind the user about the event or things that it has to do.
