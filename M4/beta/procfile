@@ -1,1 +1,1 @@
-web: cd group06/M4/beta && npm install && node app.js
+web: node app.js
