@@ -99,15 +99,9 @@ e) . Availability: The mobile app must have a minimum uptime of 99%, with downti
 f) . Scalability: The application must be able to handle increased user load without performance degradation, and scale horizontally as needed.
 	IN PROGRESS
 
-g) Storage: The application must be able to store large amounts of data, with a minimum of 1GB per user.
+g) Storage: The application must be able to store large amounts of data, with a minimum of 1GB per user. IN PROGRESS
 
-	IN PROGRESS
-
-
-h) Fault Tolerance: The application must be resilient to hardware and software failures and should have a disaster recovery plan in place to ensure data availability in the event of a catastrophic failure.
-
-
-	IN PROGRESS
+h) Fault Tolerance: The application must be resilient to hardware and software failures and should have a disaster recovery plan in place to ensure data availability in the event of a catastrophic failure. IN PROGRESS
 
 
 
