@@ -33,8 +33,9 @@ app.use(express.static('public'));
 // });
 
 // Home page
-app.get('/', function(req, res) {
-  res.render('home');
+app.get('/', async (req, res) => {
+  const reminders = await Reminder.find({});
+  res.render('home', { reminders });
 });
 
 // Display single reminder
