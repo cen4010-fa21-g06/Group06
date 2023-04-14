@@ -32,40 +32,6 @@ app.get('/', async (req, res) => {
   res.render('index', { reminders });
 });
 
-// // Home page
-// app.get('/', async (req, res) => {
-//   const reminders = await Reminder.find({});
-//   res.render('home', { reminders });
-// });
-
-// Display single reminder
-app.get('/reminders/:id', async (req, res) => {
-  const { id } = req.params;
-  const reminder = await Reminder.findById(id);
-  res.render('reminder', { reminder });
-});
-
-// Edit single reminder - display form
-app.get('/reminders/:id/edit', async (req, res) => {
-  const { id } = req.params;
-  const reminder = await Reminder.findById(id);
-  res.render('editReminder', { reminder });
-});
-
-// Edit single reminder - handle form submission
-app.put('/reminders/:id', async (req, res) => {
-  const { id } = req.params;
-  const { title, description, date } = req.body;
-  await Reminder.findByIdAndUpdate(id, { title, description, date });
-  res.redirect(`/reminders/${id}`);
-});
-
-// Delete single reminder
-app.delete('/reminders/:id', async (req, res) => {
-  const { id } = req.params;
-  await Reminder.findByIdAndDelete(id);
-  res.redirect('/');
-});
 
 // Get all reminders
 app.get('/reminders', async (req, res) => {
@@ -87,14 +53,12 @@ app.post('/addReminder', async (req, res) => {
 });
 
 // Delete reminder
-// app.delete('/reminders/:id', async (req, res) => {
-//   const { id } = req.params;
-//   await Reminder.findByIdAndDelete(id);
-//   res.sendStatus(204);
-// });
-
+app.delete('/reminders/:id', async (req, res) => {
+  const { id } = req.params;
+  await Reminder.findByIdAndDelete(id);
+  res.sendStatus(204);
+});
 
 // Start server
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server listening on port ${port}`));
-
