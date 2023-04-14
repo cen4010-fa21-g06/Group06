@@ -87,6 +87,13 @@ app.delete('/reminders/:id', async (req, res) => {
   res.sendStatus(204);
 });
 
+// Home handle
+
+app.get('/', function(req, res) {
+  res.render('home');
+});
+
+
 // Start server
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server listening on port ${port}`));
