@@ -1,5 +1,6 @@
 2.1 Title page
 
+
 2.2 Product summary
 
 For Executives: As an executive, you have a lot on your plate. You need a reliable assistant to help you stay organized and never miss a meeting or deadline. RemindAll is the perfect solution for you. With its intuitive interface and customizable settings, you can set reminders for meetings, appointments, and even important emails. Plus, with its sync feature, you can access your reminders from any device, ensuring you're always on top of your game.
