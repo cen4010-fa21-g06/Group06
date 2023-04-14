@@ -56,7 +56,7 @@ app.post('/addReminder', async (req, res) => {
 app.delete('/reminders/:id', async (req, res) => {
   const { id } = req.params;
   await Reminder.findByIdAndDelete(id);
-  res.sendStatus(204);
+  res.redirect('/reminders');
 });
 
 // Start server

@@ -14,6 +14,9 @@
             <h2><%= reminder.title %></h2>
             <p><%= reminder.description %></p>
             <p><%= reminder.date %></p>
+            <form action="/reminders/<%= reminder._id %>?_method=DELETE" method="POST">
+              <button>Delete</button>
+            </form>
           </li>
         <% }) %>
       </ul>
