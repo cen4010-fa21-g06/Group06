@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Reminders</title>
+  </head>
+  <body>
+    <h1>My Reminders</h1>
+    <ul>
+      <% reminders.forEach(function(reminder) { %>
+        <li><%= reminder.title %>: <%= reminder.description %> (<%= reminder.date %>)</li>
+      <% }); %>
+    </ul>
+    <a href="/addReminder">Add Reminder</a>
+  </body>
+</html>
