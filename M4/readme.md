@@ -86,5 +86,28 @@ For example, if the user goes to a grocery store RememberAll will send a notific
 4. Availability: This includes ensuring that the app is always accessible to users, and that any disruptions or downtime are minimized.
 5. Intellectual property: This includes protecting any trademarks, patents, or other intellectual property that the app may have, as well as ensuring that the app does not infringe on the intellectual property of others.
 
+2.7 Self-check Adherence to original Non- fnctional specs
+Checklist
+
+a) Performance: The mobile app must be fast and responsive, with minimal loading times and low memory consumption.	DONE, ON TRACK 
+
+b) Usability: The mobile app must be intuitive and user-friendly, with clear and concise instructions for all features. The design must be optimized for mobile devices and should support gestures like swipe and pinch.	DONE, ON TRACK 
+
+c) Accessibility: The mobile app must meet the standards of WCAG 2.1, with support for screen readers, large text sizes, and high contrast modes. The app must be compatible with both iOS and Android accessibility features.	IN PROGRESS 
+ d) Security: The mobile app must ensure the privacy and security of user data. All user data must be encrypted and stored securely. The app must be able to detect and prevent unauthorized access, tampering, or data loss.	DONE, ON TRACK 
+e) . Availability: The mobile app must have a minimum uptime of 99%, with downtime not exceeding 2 hours per month for maintenance. The app must be available for download from both Apple App Store and Google Play Store.	IN PROGRESS 
+f) . Scalability: The application must be able to handle increased user load without performance degradation, and scale horizontally as needed.
+	IN PROGRESS
+
+g) Storage: The application must be able to store large amounts of data, with a minimum of 1GB per user.
+
+	IN PROGRESS
+
+
+h) Fault Tolerance: The application must be resilient to hardware and software failures and should have a disaster recovery plan in place to ensure data availability in the event of a catastrophic failure.
+
+
+	IN PROGRESS
+
 
 
