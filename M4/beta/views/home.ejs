@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>All Reminders</h1>
+    <% if (reminders.length === 0) { %>
+      <p>No reminders to display.</p>
+    <% } else { %>
+      <ul>
+        <% reminders.forEach(function(reminder) { %>
+          <li>
+            <strong><%= reminder.title %></strong>
+            <ul>
+              <li>Description: <%= reminder.description %></li>
+              <li>Date: <%= reminder.date.toDateString() %></li>
+              <li>
+                <a href="/editReminder/<%= reminder._id %>">Edit</a>
+                <form action="/reminders/<%= reminder._id %>?_method=DELETE" method="POST">
+                  <button type="submit">Delete</button>
+                </form>
+              </li>
+            </ul>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+    <a href="/addReminder">Add Reminder</a>
+  </body>
+</html>

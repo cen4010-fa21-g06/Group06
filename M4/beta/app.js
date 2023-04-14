@@ -32,6 +32,34 @@ app.get('/', async (req, res) => {
   res.render('index', { reminders });
 });
 
+// Display single reminder
+app.get('/reminders/:id', async (req, res) => {
+  const { id } = req.params;
+  const reminder = await Reminder.findById(id);
+  res.render('reminder', { reminder });
+});
+
+// Edit single reminder - display form
+app.get('/reminders/:id/edit', async (req, res) => {
+  const { id } = req.params;
+  const reminder = await Reminder.findById(id);
+  res.render('editReminder', { reminder });
+});
+
+// Edit single reminder - handle form submission
+app.put('/reminders/:id', async (req, res) => {
+  const { id } = req.params;
+  const { title, description, date } = req.body;
+  await Reminder.findByIdAndUpdate(id, { title, description, date });
+  res.redirect(`/reminders/${id}`);
+});
+
+// Delete single reminder
+app.delete('/reminders/:id', async (req, res) => {
+  const { id } = req.params;
+  await Reminder.findByIdAndDelete(id);
+  res.redirect('/');
+});
 
 // Get all reminders
 app.get('/reminders', async (req, res) => {
