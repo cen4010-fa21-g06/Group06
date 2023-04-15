@@ -36,25 +36,15 @@ For Customers: Whether you're a busy parent or a student juggling multiple respo
 
 Unique Features: RemindAll offers personalized reminders that adapt to your behavior and schedule. It uses machine learning to suggest the best times for reminders based on your past actions. Additionally, it offers integration with popular calendars like Google Calendar and Outlook, ensuring that all your reminders are in one place. RemindAll also allows users to set reminders based on their location to provide the user to set reminders more efficiently. 
 
+2.3 Usability test plan : Add event
+1.Test Objectives: The objective of this usability test plan is to evaluate the usability of the Add event feature in a mobile app. The test will focus on the ability of the feature to allow users to set reminders. This requirement allows users to create and organize their reminders into separate lists based on different categories such as work, personal, fitness, etc. This helps users keep their reminders organized and easy to manage.
+The test aims to identify any usability issues that may exist in the feature and provide recommendations for improvements. This usability test plan outlines the objectives, system setup, task to be accomplished, intended user, completion criteria, URL of the app, and questionnaire form for evaluating the usability of a mobile app feature that allows users to set reminders and events on their calendar. The test aims to identify any usability issues and provide recommendations for improvements to ensure the feature is easy to use and meets the needs of the target users. The plan is designed to be easy to use and understand for usability testers and includes a simple Likert scale questionnaire to gather feedback from users.
+ 2. Test Plan: Starting Point: The mobile app will be installed on a smartphone or a tablet. The user will start from the home screen of the app. Task to be Accomplished: user will select the reminder app, then select the top right of the screen. Fill out the event details. Enter a title for the event — this is the only mandatory field — and then adjust the date and time. If it's an all-day event, swipe the "All-day" button to the right. You can also tap the "Repeat" option if this is an event that's going to occur regularly. When you're done, tap "Add" in the top-right corner. The test will also be considered successful if the user can complete the task within a reasonable amount of time (no more than 2 minutes). URL of the System to be Tested: remindall.herokuapp.com 
+3. Questionnaire Form: Please rate the following statements on a scale of 1-5, where 1 is strongly disagree and 5 is strongly agree.
+1.	The Add event feature was easy to use.
+2.	The Add event feature met my needs.
+3.	I would use the Add event feature again. Thank you for participating in this usability test. Your feedback is greatly appreciated. Note: The questionnaire will be presented to the user after they have completed the task. The reviewer will record the user's responses and use them to evaluate the usability of the feature.
 
-2.3 Usability test plan
-Usability Test Plan: Geo Location 
-1.Test Objectives:
-Geo Location is the process of locating a device or user's precise physical position is known as GEO location, often referred to as geographic location. Several technologies, including GPS, Wi-Fi, cellular networks, and IP addresses, are used for this. To offer users location-based services and customized content, GEO location is frequently employed in mobile apps and websites. For instance, a mobile app might use GEO location to offer the user messages, directions, or recommendations based on where they are right now.
-The objective of this usability test plan is to evaluate the usability of the Geo Location feature in a mobile app. The test will focus on the ability of the feature to allow users to set reminders based on their location, such as reminding them to buy groceries if they are near a supermarket. The test aims to identify any usability issues that may exist in the feature and provide recommendations for improvements. The test also aims to ensure that the feature is easy to use and meets the needs of the target users. The navigation system known as GPS, or "Global Positioning System," uses satellites to pinpoint a person's or object's exact location on Earth. GPS triangulates a user's location based on signals sent out by orbiting satellites using a network of receivers on the ground. To give users precise position information, this technology is frequently employed in mobile devices like smartphones and GPS navigational systems. Many uses for GPS exist, such as navigation, tracking, mapping, and surveying. This usability test plan outlines the objectives, system setup, task to be accomplished, intended user, completion criteria, URL of the app, and questionnaire form for evaluating the usability of a mobile app feature that allows users to set reminders based on their location. The test aims to identify any usability issues and provide recommendations for improvements to ensure the feature is easy to use and meets the needs of the target users. The plan is designed to be easy to use and understand for usability testers and includes a simple Likert scale questionnaire to gather feedback from users.
-2. Test Plan:
-Starting Point: The user will start from the home screen of the app.
-Task to be Accomplished: The user will be asked to set a reminder based on their current location. For example, they will be asked to set a reminder to buy groceries when they are near a supermarket.
-Intended User: The intended user for this test is anyone who uses the app and needs to set reminders based on their location.
-Completion Criteria: The test will be considered successful if the user can set a reminder based on their location without any assistance or confusion. The test will also be considered successful if the user can complete the task within a reasonable amount of time (no more than 2 minutes).
-URL of the System to be Tested: remindall.herokuapp.com
-3. Questionnaire Form:
-Please rate the following statements on a scale of 1-5, where 1 is strongly disagree and 5 is strongly agree.
-1.	The GEO LOCATION feature was easy to use.
-2.	The Geo Location feature met my needs.
-3.	I would use the Geo Location feature again.
-Thank you for participating in this usability test. Your feedback is greatly appreciated.
-Note: The questionnaire will be presented to the user after they have completed the task. The reviewer will record the user's responses and use them to evaluate the usability of the feature.
 
 
 
