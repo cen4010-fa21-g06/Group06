@@ -18,10 +18,22 @@ mongoose.connect('mongodb+srv://juan:nob@cluster0.9wsduos.mongodb.net/reminders?
 const reminderSchema = new mongoose.Schema({
   title: String,
   description: String,
-  date: Date,
+  data: Date,
+  location: {
+    type: {
+      type: String,
+      enum: ['Point'],
+      required: true
+    },
+    coordinates: {
+      type: [Number],
+      required: true
+    }
+  }
 });
 
 const Reminder = mongoose.model('Reminder', reminderSchema, 'reminders');
+
 
 // Set up middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -49,7 +61,15 @@ app.get('/addReminder', async (req, res) => {
 // Add new reminder - handle form submission
 app.post('/addReminder', async (req, res) => {
   const { title, description, date } = req.body;
-  const reminder = new Reminder({ title, description, date });
+  const reminder = new Reminder({ 
+    title, 
+    description, 
+    date,
+    location: {
+      type: "Point",
+      coordinates: [long, lat]
+    }
+  });
   await reminder.save();
   res.redirect('/reminders');
 });
