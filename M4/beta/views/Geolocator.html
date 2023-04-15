@@ -39,14 +39,13 @@
          }
       }
        //checks the actual user position
-      function success(data) {
-         let latitude = data.coords.latitude;
-         let longitude = data.coords.longitude;
-         result.innerHTML = "Latitude: " + latitude + "<br>Longitude: "  + longitude;
-         if(latitude== lat && longitude == long){
-             alert("You are near an important location.");
-             console.log("You are near an important location.");
-         }
+       function success(data) {
+                let latitude = data.coords.latitude;
+                let longitude = data.coords.longitude;
+                if (latitude === lat && longitude === long) {
+                    alert("You are near an important location.");
+                    console.log("You are near an important location.");
+                }
       }
        
        //this will replace the longitud and latitud stored  in teh DB
