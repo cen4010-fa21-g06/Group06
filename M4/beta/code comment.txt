@@ -1,0 +1,163 @@
+//App.js
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const path = require('path');
+const methodOverride = require('method-override');
+
+// Set up view engine
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+// Connect to MongoDB Atlas
+mongoose.connect('mongodb+srv://juan:nob@cluster0.9wsduos.mongodb.net/reminders?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connected to MongoDB Atlas'))
+  .catch((err) => console.error('Could not connect to MongoDB Atlas'));
+
+// Define Reminder schema and model
+const reminderSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  data: Date,
+  location: {
+    type: {
+      type: String,
+      enum: ['Point'],
+      required: true
+    },
+    coordinates: {
+      type: [Number],
+      required: true
+    }
+  }
+});
+
+const Reminder = mongoose.model('Reminder', reminderSchema, 'reminders');
+
+
+// Set up middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static('public'));
+app.use(methodOverride('_method'));
+
+// Define routes
+app.get('/', async (req, res) => {
+  const reminders = await Reminder.find({});
+  res.render('index', { reminders });
+});
+
+
+// Get all reminders
+app.get('/reminders', async (req, res) => {
+  const reminders = await Reminder.find({});
+  res.render('reminders', { reminders });
+});
+
+// Add new reminder - display form
+app.get('/addReminder', async (req, res) => {
+  res.render('addReminder');
+});
+
+// Add new reminder - handle form submission
+app.post('/addReminder', async (req, res) => {
+  const { title, description, date, long, lat } = req.body;
+  const reminder = new Reminder({ 
+    title, 
+    description, 
+    date,
+    location: {
+      type: "Point",
+      coordinates: [long, lat]
+    }
+  });
+  await reminder.save();
+  res.redirect('/reminders');
+});
+
+// Delete reminder
+app.delete('/reminders/:id', async (req, res) => {
+  const { id } = req.params;
+  await Reminder.findByIdAndDelete(id);
+  res.redirect('/reminders');
+});
+
+// Start server
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Server listening on port ${port}`));
+
+//Code Comment: this code has been well commented and the definition of the function to call the respective pages and scripts are correct
+
+//Add reminder
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Reminder</title>
+  </head>
+  <body>
+    <h1>Add Reminder</h1>
+    <form action="/addReminder" method="POST">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title"><br>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"></textarea><br>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date"><br>
+
+      <input type="submit" value="Add Reminder">
+    </form>
+  </body>
+</html>
+//Code Review: this is a html field that sneds a post wiht the data its only missing CSS for more style but the HTLm is following regulations
+//reminder.js
+<html>
+  <head>
+    <title>Reminders</title>
+  </head>
+  <body>
+    <h1>Reminders</h1>
+    <% if (reminders.length === 0) { %>
+      <p>No reminders yet.</p>
+    <% } else { %>
+      <ul>
+        <% reminders.forEach((reminder) => { %>
+          <li>
+            <h2><%= reminder.title %></h2>
+            <p><%= reminder.description %></p>
+            <p><%= reminder.date %></p>
+            <!-- <form action="/reminders/<%= reminder._id %>?_method=DELETE" method="POST">
+              <button>Delete</button>
+            </form> -->
+            //Code Comment: this call of a fucntion is not complete and may interfere later on
+            <form action="/reminders/<%= reminder._id %>" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+              <button>Delete</button>
+            </form>
+            
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+    <a href="/addReminder">Add Reminder</a>
+  </body>
+</html>
+//Code Review: the title, and decritpion are well implemented but the time and delete fuctions need more work with the parameters
+//index.js
+<html>
+  <head>
+    <title>My Reminders</title>
+  </head>
+  <body>
+    <h1>My Reminders</h1>
+    <ul>
+      <% reminders.forEach(function(reminder) { %>
+      //Code Review: date attribute is being miscalled in the definition it should be changed to data, as the initilization was made
+        <li><%= reminder.title %>: <%= reminder.description %> (<%= reminder.date %>)</li>
+      <% }); %>
+    </ul>
+    <a href="/addReminder">Add Reminder</a>
+    <a href="/reminders">View Reminders</a>
+  </body>
+</html>
