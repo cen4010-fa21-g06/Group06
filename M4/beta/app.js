@@ -18,7 +18,7 @@ mongoose.connect('mongodb+srv://juan:nob@cluster0.9wsduos.mongodb.net/reminders?
 const reminderSchema = new mongoose.Schema({
   title: String,
   description: String,
-  data: Date,
+  date: Date,
   location: {
     type: {
       type: String,
@@ -34,12 +34,12 @@ const reminderSchema = new mongoose.Schema({
 
 const Reminder = mongoose.model('Reminder', reminderSchema, 'reminders');
 
-
 // Set up middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 
+// Set up geolocator page
 app.get('/geolocator', (req, res) => {
   res.sendFile(__dirname + '/beta/geolocator.html');
 });
@@ -49,7 +49,6 @@ app.get('/', async (req, res) => {
   const reminders = await Reminder.find({});
   res.render('index', { reminders });
 });
-
 
 // Get all reminders
 app.get('/reminders', async (req, res) => {
@@ -64,14 +63,14 @@ app.get('/addReminder', async (req, res) => {
 
 // Add new reminder - handle form submission
 app.post('/addReminder', async (req, res) => {
-  const { title, description, date, long, lat } = req.body;
+  const { title, description, date, lng, lat } = req.body; 
   const reminder = new Reminder({ 
     title, 
     description, 
     date,
     location: {
       type: "Point",
-      coordinates: [long, lat]
+      coordinates: [lng, lat] 
     }
   });
   await reminder.save();
@@ -85,6 +84,23 @@ app.delete('/reminders/:id', async (req, res) => {
   res.redirect('/reminders');
 });
 
+// Save location
+app.post('/saveLocation', async (req, res) => {
+  const { latitude, longitude } = req.body;
+  const reminder = new Reminder({
+    title: 'Location Reminder',
+    description: 'A reminder for a location',
+    date: new Date(),
+    location: {
+      type: 'Point',
+      coordinates: [longitude, latitude]
+    }
+  });
+  await reminder.save();
+  res.json({ success: true });
+});
+
 // Start server
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server listening on port ${port}`));
+
