@@ -40,6 +40,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 
+app.get('/geolocator', (req, res) => {
+  res.sendFile(__dirname + '/beta/geolocator.html');
+});
+
 // Define routes
 app.get('/', async (req, res) => {
   const reminders = await Reminder.find({});
