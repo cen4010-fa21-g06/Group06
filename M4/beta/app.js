@@ -60,7 +60,7 @@ app.get('/addReminder', async (req, res) => {
 
 // Add new reminder - handle form submission
 app.post('/addReminder', async (req, res) => {
-  const { title, description, date } = req.body;
+  const { title, description, date, long, lat } = req.body;
   const reminder = new Reminder({ 
     title, 
     description, 
