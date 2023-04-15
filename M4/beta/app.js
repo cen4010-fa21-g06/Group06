@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
+const methodOverride = require('method-override');
 
 // Set up view engine
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +26,7 @@ const Reminder = mongoose.model('Reminder', reminderSchema, 'reminders');
 // Set up middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
 
 // Define routes
 app.get('/', async (req, res) => {
