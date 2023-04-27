@@ -6,13 +6,6 @@ const path = require('path');
 const methodOverride = require('method-override');
 const mime = require('mime');
 
-// Serve static files with the correct MIME type
-app.use('/beta', express.static('beta', { 
-  setHeaders: (res, path) => {
-    res.setHeader('Content-Type', mime.getType(path));
-  }
-}));
-
 // Set up view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -44,9 +37,10 @@ const Reminder = mongoose.model('Reminder', reminderSchema, 'reminders');
 
 // Set up middleware
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static('public'));
-app.use(methodOverride('_method'));
-app.use(express.static('beta'));
+app.use(express.static(path.join(__dirname, 'public')));
+// app.use(methodOverride('_method'));
+
+
 
 // Set up geolocator page
 app.get('/geolocator', (req, res) => {
