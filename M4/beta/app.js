@@ -55,6 +55,10 @@ app.get('/', (req, res) => {
   res.render('login');
 });
 
+// Index - display form
+app.get('/index', async (req, res) => {
+  res.render('index');
+});
 
 // Get all reminders
 app.get('/reminders', async (req, res) => {
@@ -100,7 +104,7 @@ app.post('/login', async (req, res) => {
 
   if (username === validUsername && password === validPassword) {
     // Successful login
-    res.redirect('/reminders');
+    res.redirect('/index');
   } else {
     // Failed login
     res.send('Invalid username or password!');
