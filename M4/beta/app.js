@@ -41,7 +41,7 @@ app.use(methodOverride('_method'));
 
 // Set up geolocator page
 app.get('/geolocator', (req, res) => {
-  res.sendFile(__dirname + '/geolocator');
+  res.render('geolocator');
 });
 
 // Define routes
