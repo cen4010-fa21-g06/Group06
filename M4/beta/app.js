@@ -45,10 +45,16 @@ app.get('/geolocator', (req, res) => {
 });
 
 // Define routes
-app.get('/', async (req, res) => {
-  const reminders = await Reminder.find({});
-  res.render('index', { reminders });
+// app.get('/', async (req, res) => {
+//   const reminders = await Reminder.find({});
+//   res.render('index', { reminders });
+// });
+
+//Login page for root url
+app.get('/', (req, res) => {
+  res.render('login');
 });
+
 
 // Get all reminders
 app.get('/reminders', async (req, res) => {
