@@ -1,14 +1,17 @@
 body {
-    background: linear-gradient(to bottom, #d77219, #58096e);
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Center Content */
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  background: linear-gradient(to bottom, #9490f9, #f1b040);
+  margin: 0;
+  padding: 0;
+  font-size: 25px; /* Set a base font size */
+}
+
+/* Center Content */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
   

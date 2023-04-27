@@ -2,8 +2,11 @@
 <html>
   <head>
     <title>Reminders</title>
+    <link rel="stylesheet" href="/group.css">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
   </head>
   <body>
+    <div class="container">
     <h1>Reminders</h1>
     <% if (reminders.length === 0) { %>
       <p>No reminders yet.</p>
@@ -29,5 +32,6 @@
       </ul>
     <% } %>
     <a href="/addReminder">Add Reminder</a>
+  </div>
   </body>
 </html>
