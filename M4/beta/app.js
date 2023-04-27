@@ -104,7 +104,7 @@ app.post('/login', async (req, res) => {
 
   if (username === validUsername && password === validPassword) {
     // Successful login
-    res.redirect('/index');
+    res.redirect('/reminders');
   } else {
     // Failed login
     res.send('Invalid username or password!');
