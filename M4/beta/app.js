@@ -38,6 +38,7 @@ const Reminder = mongoose.model('Reminder', reminderSchema, 'reminders');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
+app.use(express.static('beta'));
 
 // Set up geolocator page
 app.get('/geolocator', (req, res) => {
