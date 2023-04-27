@@ -84,6 +84,29 @@ app.delete('/reminders/:id', async (req, res) => {
   res.redirect('/reminders');
 });
 
+// Define the login route
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  // Hardcoded username and password
+  const validUsername = 'owl';
+  const validPassword = 'fau2023';
+
+  if (username === validUsername && password === validPassword) {
+    // Successful login
+    res.send('Login successful!');
+    res.redirect('/index');
+  } else {
+    // Failed login
+    res.send('Invalid username or password!');
+  }
+});
+
+//login display form
+app.get('/login', (req, res) => {
+  res.render('login');
+});
+
 // Save location
 app.post('/saveLocation', async (req, res) => {
   const { latitude, longitude } = req.body;
