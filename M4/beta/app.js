@@ -94,7 +94,6 @@ app.post('/login', async (req, res) => {
 
   if (username === validUsername && password === validPassword) {
     // Successful login
-    res.send('Login successful!');
     res.redirect('/index');
   } else {
     // Failed login
