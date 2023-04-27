@@ -40,8 +40,8 @@ app.use(express.static('public'));
 app.use(methodOverride('_method'));
 
 // Set up geolocator page
-app.get('/geolocator.html', (req, res) => {
-  res.sendFile(__dirname + '/views/geolocator.html');
+app.get('/geolocator', (req, res) => {
+  res.sendFile(__dirname + '/geolocator');
 });
 
 // Define routes
