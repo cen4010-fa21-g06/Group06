@@ -45,15 +45,15 @@ app.get('/geolocator', (req, res) => {
 });
 
 // Define routes
-// app.get('/', async (req, res) => {
-//   const reminders = await Reminder.find({});
-//   res.render('index', { reminders });
-// });
+app.get('/', async (req, res) => {
+  const reminders = await Reminder.find({});
+  res.render('login', { reminders });
+});
 
 //Login page for root url
-app.get('/', (req, res) => {
-  res.render('login');
-});
+// app.get('/', (req, res) => {
+//   res.render('login');
+// });
 
 // Index - display form
 app.get('/index', async (req, res) => {
@@ -109,11 +109,6 @@ app.post('/login', async (req, res) => {
     // Failed login
     res.send('Invalid username or password!');
   }
-});
-
-//login display form
-app.get('/login', (req, res) => {
-  res.render('login');
 });
 
 // Save location
