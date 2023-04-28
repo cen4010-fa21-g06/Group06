@@ -20,7 +20,8 @@ April 30, 2023
 
 
 Product Summary
-	For Executives: As an executive, you have a lot on your plate. You need a reliable assistant to help you stay organized and never miss a meeting or deadline. RememberAll is the perfect solution for you. With its intuitive interface and customizable settings, you can set reminders for meetings, appointments, and even important emails. Plus, with its sync feature, you can access your reminders from any device, ensuring you're always on top of your game.
+
+For Executives: As an executive, you have a lot on your plate. You need a reliable assistant to help you stay organized and never miss a meeting or deadline. RememberAll is the perfect solution for you. With its intuitive interface and customizable settings, you can set reminders for meetings, appointments, and even important emails. Plus, with its sync feature, you can access your reminders from any device, ensuring you're always on top of your game.
 For Marketing: As a marketer, you understand the importance of staying on top of your campaigns and deadlines. RememberAll can help you do just that. With its advanced scheduling capabilities, you can set reminders for campaign launches, content deadlines, and even social media posts. And with its powerful analytics, you can track the success of your campaigns and make adjustments as needed.
 For Customers: Whether you're a busy parent or a student juggling multiple responsibilities, RememberAll has got your back. Its simple and user-friendly interface makes setting reminders a breeze. You can set reminders for everything from picking up groceries to completing assignments. And with its location-based reminders, you'll never forget to pick up that item on your to-do list when you're out and about.
 1.	Set reminders for specific dates and times
