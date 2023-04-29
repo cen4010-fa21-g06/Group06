@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Reminders</title>
+    <link rel="stylesheet" type="text/css" href="/listStyle.css">
+    <link rel="stylesheet" type="text/css" href="/formstyle.css">
+<head>
+    <title>RemindAll</title>
     <link rel="stylesheet" href="/group.css">
-    <link rel="stylesheet" type="text/css" href="/styles.css">
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
     <h1>Reminders</h1>
     <% if (reminders.length === 0) { %>
       <p>No reminders yet.</p>
     <% } else { %>
-      <ul>
+      <ol class="alternating-colors">
         <% reminders.forEach((reminder) => { %>
           <li>
             <h2><%= reminder.title %></h2>
@@ -20,18 +21,20 @@
             <!-- <form action="/reminders/<%= reminder._id %>?_method=DELETE" method="POST">
               <button>Delete</button>
             </form> -->
-
             <form action="/reminders/<%= reminder._id %>" method="POST">
-              <input type="hidden" name="_method" value="DELETE">
-              <button>Delete</button>
+              
+                  <input type="hidden" name="_method" value="DELETE">
+                <button class="boxy">Delete</button>
+                
             </form>
             
-
           </li>
         <% }) %>
-      </ul>
+      </ol>
     <% } %>
-    <a href="/addReminder">Add Reminder</a>
+        <div class="field padding-bottom--24">
+    <a href="/addReminder"><input type="submit" name="submit" value="Add Reminder"></a>
+        </div>
   </div>
-  </body>
+</body>
 </html>
