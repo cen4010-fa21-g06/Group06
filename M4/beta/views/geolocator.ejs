@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" type="text/css" href="formstyle.css">
 <head>
     <title>RemindAll</title>
-    <link rel="stylesheet" type="text/css" href="/styles.css">
     <link rel="stylesheet" href="/group.css">
 </head>
 <body onload="myGeolocator()">
-    <h1 style="text-align: center">RemindAll</h1>
 
-    <div>
+<div class="login-root">
+    <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+          <h1><a href="http://blog.stackfindover.com/" rel="dofollow">RememberAll</a></h1>
+        </div>
+        <div class="formbg-outer">
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <span class="padding-bottom--15">Geolocator</span>
+              <form action="/addReminder" method="POST" id="stripe-login">
+                <div class="field padding-bottom--24">
+                  <label for="long">Longitude:</label>
+                  <input type="text" name="long" id="long">
+                </div>
+                <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="lat">Latitude:</label>
+                  </div>
+                  <input type="text" name="lat" id="lat">
+                </div>
+                <div class="field padding-bottom--24">
+                  <input type="submit" name="submit" value="Add Reminder" onclick="saveloc()">
+                </div>
+              </form>
+                    <div>
         <center>
             <div id="result"></div>
             <div id="loc"></div>
-            <p>
-                <label for="long">Longitude:</label>
-                <input type="text" name="long" id="long">
-            </p>
-            <p>
-                <label for="lat">Latitude:</label>
-                <input type="text" name="lat" id="lat">
-            </p>
-            <button onclick="saveloc()">Add Location</button>
         </center>
     </div>
-
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     <script>
         let result = document.getElementById("result");
         let long = 0;
         let lat = 0;
-
         function myGeolocator() {
             navigator.geolocation.getCurrentPosition(success);
         }
-
         //checks the actual user position
         function success(data) {
             let latitude = data.coords.latitude;
@@ -42,7 +60,6 @@
                 console.log("You are near an important location.");
             }
         }
-
         //this will replace the longitude and latitude stored in the DB
         function saveloc() {
             let long2 = document.querySelector('#long').value;
@@ -52,7 +69,6 @@
             document.getElementById("loc").innerHTML = "Latitude: " + lat + "<br>Longitude: "  + long;
             myGeolocator();
         }
-
         //post request to save location
         fetch("/saveLocation", {
             method: "POST",
@@ -65,4 +81,3 @@
    </script>
 </body>
 </html>
-
