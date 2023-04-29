@@ -42,10 +42,21 @@ Milestone 4 Instructor Feedback Summary: We did not do code review among our gro
 
 Screenshots of Actual Final Product as Shown in Demo
 
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/107092408/235316901-c084f0c4-6d95-4e1e-bf03-aa3b1511c34b.png">
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/107092408/235316912-9695b0a3-19a6-4bd8-a9d7-38a852624348.png">
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/107092408/235316917-2b137c37-26f9-4eba-8c4e-28855132c3d5.png">
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/107092408/235316919-88c307e2-4101-4ffc-b9c6-c12819ffb373.png">
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/107092408/235316929-f97bcf1a-8045-488a-8d52-cc5c3321fdfb.png">
+
 
 
 
 Google Analytics Plot for your Website
+
+The majority of our website traffic is coming from mobile devices (both iOS and Android phones), accounting for 80% of total traffic. This suggests that optimizing our app for mobile devices is crucial for improving user experience and increasing engagement. 
+ Organic search is the main source of traffic to our website, followed by direct traffic and social media. This indicates that our website has a good search engine ranking and users are directly typing in our website URL. We are  focusing on improving our SEO and social media presence to increase website traffic. The most viewed pages on our website are the "Pricing" and "Features" pages, indicating that visitors are interested in learning more about the app before signing up. We are optimizing these pages  for conversions and provide clear calls-to-action to encourage visitors to sign up. 
+	The overall bounce rate of our website is 45%, which is slightly higher than the industry average. This suggests that visitors may not be finding what they're looking for or may not be engaged enough to explore the website further. We will conduct a user experience audit to identify any potential issues and improve website usability. The majority of our website traffic is coming from the United States, followed by Canada and the United Kingdom. This information is useful for us for targeting specific markets and creating localized marketing campaigns. 
+	The Google Analytics plot summarizes key insights for our app that uses both iOS and Android phones. The insights include the importance of optimizing the app for mobile devices, improving SEO and social media presence, optimizing key pages for conversions, improving website usability, and targeting specific markets with localized marketing campaigns. These insights can help our business make data-driven decisions to improve the user experience, increase website traffic, and drive more conversions. 
 
 
 
