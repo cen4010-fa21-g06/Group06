@@ -3,47 +3,54 @@
     <link rel="stylesheet" type="text/css" href="/listStyle.css">
     <link rel="stylesheet" type="text/css" href="/formstyle.css">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JXLNM33GRQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JXLNM33GRQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-JXLNM33GRQ');
-</script>
+        gtag('config', 'G-JXLNM33GRQ');
+    </script>
     <title>RemindAll</title>
     <link rel="stylesheet" href="/group.css">
 </head>
 <body>
-    <div class="container">
-    <h1>Reminders</h1>
-    <% if (reminders.length === 0) { %>
-      <p>No reminders yet.</p>
-    <% } else { %>
-      <ol class="alternating-colors">
-        <% reminders.forEach((reminder) => { %>
-          <li>
-            <h2><%= reminder.title %></h2>
-            <p><%= reminder.description %></p>
-            <p><%= reminder.date %></p>
-            <!-- <form action="/reminders/<%= reminder._id %>?_method=DELETE" method="POST">
-              <button>Delete</button>
-            </form> -->
-            <form action="/reminders/<%= reminder._id %>" method="POST">
-              
-                  <input type="hidden" name="_method" value="DELETE">
-                <button class="boxy">Delete</button>
-                
-            </form>
-            
-          </li>
-        <% }) %>
-      </ol>
-    <% } %>
-        <div class="field padding-bottom--24">
-    <a href="/addReminder"><input type="submit" name="submit" value="Add Reminder"></a>
-        </div>
+  <div class="container">
+      <h1>Reminders</h1>
+      <% if (reminders.length === 0) { %>
+          <p>No reminders yet.</p>
+      <% } else { %>
+          <ol class="alternating-colors">
+              <% reminders.forEach((reminder) => { %>
+                  <li>
+                      <h2><%= reminder.title %></h2>
+                      <p><%= reminder.description %></p>
+                      <p><%= reminder.date %></p>
+                      <form action="/reminders/<%= reminder._id %>?_method=DELETE" method="POST" class="delete-form">
+                          <button type="submit" class="boxy">Delete</button>
+                      </form>
+                  </li>
+              <% }) %>
+          </ol>
+      <% } %>
+      <div class="field padding-bottom--24">
+          <a href="/addReminder"><input type="submit" name="submit" value="Add Reminder"></a>
+      </div>
   </div>
+  <script>
+      // Add event listener to each delete form
+      const deleteForms = document.querySelectorAll('.delete-form');
+      deleteForms.forEach(form => {
+          form.addEventListener('submit', event => {
+              event.preventDefault();
+              const confirmDelete = confirm('Are you sure you want to delete this reminder?');
+              if (confirmDelete) {
+                  form.submit();
+              }
+          });
+      });
+  </script>
 </body>
 </html>
+

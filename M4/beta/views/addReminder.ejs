@@ -1,57 +1,56 @@
 <!DOCTYPE html>
 <html>
-    
+<head>
     <link rel="stylesheet" type="text/css" href="/formstyle.css">
-  <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JXLNM33GRQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JXLNM33GRQ');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JXLNM33GRQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JXLNM33GRQ');
+    </script>
     <title>Add Reminder</title>
-  </head>
-  <body>
-  <div class="login-root">
-    <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
-      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
-        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <h1><a href="http://blog.stackfindover.com/" rel="dofollow">RememberAll</a></h1>
-        </div>
-        <div class="formbg-outer">
-          <div class="formbg">
-            <div class="formbg-inner padding-horizontal--48">
-              <span class="padding-bottom--15">Add Reminder</span>
-              <form action="/addReminder" method="POST" id="stripe-login">
-                <div class="field padding-bottom--24">
-                  <label for="title">Title</label>
-                  <input type="text" id="title" name="title">
+</head>
+<body>
+    <div class="login-root">
+        <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+            <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+                <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+                    <h1>RememberAll</h1>
                 </div>
-                <div class="field padding-bottom--24">
-                  <div class="grid--50-50">
-                    <label for="description">Description</label>
-                  </div>
-                  <input id="description" name="description">
+                <div class="formbg-outer">
+                    <div class="formbg">
+                        <div class="formbg-inner padding-horizontal--48">
+                            <span class="padding-bottom--15">Add Reminder</span>
+                            <form action="/addReminder" method="POST" id="stripe-login">
+                                <div class="field padding-bottom--24">
+                                    <label for="title">Title</label>
+                                    <input type="text" id="title" name="title">
+                                </div>
+                                <div class="field padding-bottom--24">
+                                    <div class="grid--50-50">
+                                        <label for="description">Description</label>
+                                    </div>
+                                    <input id="description" name="description">
+                                </div>
+                                <div class="field padding-bottom--24">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" name="date">
+                                </div>
+                                <div class="field padding-bottom--24">
+                                    <input type="submit" name="submit" value="Add Reminder">
+                                </div>
+                            </form>
+                            <div class="field">
+                                <a href="/geolocator">Go to Geolocator</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="field padding-bottom--24">
-                  <label for="date">Date</label>
-                  <input type="date" id="date" name="date">
-                </div>
-                <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Add Reminder">
-                </div>
-                <div class="field">
-                    <a href="/geolocator"><input type="submit" name="submit" value="Go to Geolocator"></a>
-                </div>
-              </form>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  </body>
+</body>
 </html>
+

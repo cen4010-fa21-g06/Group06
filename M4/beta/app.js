@@ -11,7 +11,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Connect to MongoDB Atlas
-mongoose.connect('mongodb+srv://juan:nob@cluster0.9wsduos.mongodb.net/reminders?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://juan:nob@cluster0.9wsduos.mongodb.net/reminders?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
   .then(() => console.log('Connected to MongoDB Atlas'))
   .catch((err) => console.error('Could not connect to MongoDB Atlas'));
 
@@ -38,9 +41,7 @@ const Reminder = mongoose.model('Reminder', reminderSchema, 'reminders');
 // Set up middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(methodOverride('_method'));
-
-
+app.use(methodOverride('_method'));
 
 // Set up geolocator page
 app.get('/geolocator', (req, res) => {
@@ -52,11 +53,6 @@ app.get('/', async (req, res) => {
   const reminders = await Reminder.find({});
   res.render('login', { reminders });
 });
-
-//Login page for root url
-// app.get('/', (req, res) => {
-//   res.render('login');
-// });
 
 // Index - display form
 app.get('/index', async (req, res) => {
@@ -76,14 +72,14 @@ app.get('/addReminder', async (req, res) => {
 
 // Add new reminder - handle form submission
 app.post('/addReminder', async (req, res) => {
-  const { title, description, date, lng, lat } = req.body; 
-  const reminder = new Reminder({ 
-    title, 
-    description, 
+  const { title, description, date, lng, lat } = req.body;
+  const reminder = new Reminder({
+    title,
+    description,
     date,
     location: {
       type: "Point",
-      coordinates: [lng, lat] 
+      coordinates: [lng, lat]
     }
   });
   await reminder.save();
@@ -117,17 +113,16 @@ app.post('/login', async (req, res) => {
 // Save location
 app.post('/saveLocation', async (req, res) => {
   const { latitude, longitude } = req.body;
-  const reminder = new Reminder({
-    title: 'Location Reminder',
-    description: 'A reminder for a location',
-    date: new Date(),
-    location: {
-      type: 'Point',
-      coordinates: [longitude, latitude]
-    }
-  });
-  await reminder.save();
-  res.json({ success: true });
+  const reminder = await Reminder.findOne({ title: 'Location Reminder' });
+
+  if (reminder) {
+    reminder.location.coordinates = [longitude, latitude];
+    await reminder.save();
+    res.json({ success: true });
+  } else {
+    // Handle case when the reminder is not found
+    res.json({ success: false, message: 'Location reminder not found' });
+  }
 });
 
 // Start server
